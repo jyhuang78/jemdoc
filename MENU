@@ -14,7 +14,7 @@ Jemdoc
 User's guide
     running jemdoc                      [using.html]
     example page                        [example.html]
-    example page (no menu)              [nomenu.html]
+    example page\n(no menu)              [nomenu.html]
     cheat sheet                         [cheatsheet.html]
     extra syntax                        [extra.html]
 

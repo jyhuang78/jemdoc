@@ -163,8 +163,9 @@ div.menu-category {
 
 div.menu-item {
 	font-size: 16px;
-	padding-left: 25px;
+	padding-left: 41px;
 	padding-right: 25px;
+    text-indent: -16px;
 }
 
 div#toptitle {
