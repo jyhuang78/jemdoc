@@ -6,7 +6,7 @@ Yet, now it has a new design. If you know how to use [jemdoc](https://jemdoc.jab
 
 ## Download
 
-You need to download `./jemdoc`,`./jebref.css` and `./mysite.conf` files.
+You need to download `./jemdoc`,`./jemdoc.css` and `./mysite.conf` files.
 
 Notice that, **you have to download the `./jemdoc` excutable, because there were some modification from the original one in [`jemdox+Mathjax`](https://github.com/wsshin/jemdoc_mathjax)**.
 
