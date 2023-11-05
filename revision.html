@@ -5,18 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<link rel="icon" href="./images/icon.png">
-<link rel="stylesheet" href="main.css" type="text/css" />
-<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-<!--- <title>jemdoc &ndash; version and bug information</title> --->
-<title>jemdoc + new design</title>
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<link rel="stylesheet" href="https://fastly.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
+<title>jemdoc &ndash; version and bug information</title>
 <!-- MathJax -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async>
-</script>
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-	  TeX: { equationNumbers: { autoNumber: "AMS" } }
-});
+<script type="text/javascript" id="MathJax-script" async
+  src="https://fastly.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
 <!-- End MathJax -->
 </head>
@@ -27,12 +21,10 @@ MathJax.Hub.Config({
 <div id="header-icon-text-container">
 <div id="header-icon-container" >
 <a href="index.html"><img src="./images/profile2.png" alt="" style="width: 100%; height: 100%; position: center; padding:0px; margin: 0px;"></a>
-</div>
-<div id="header-text-container">
+</div><div id="header-text-container">
 <a href="index.html">jemdoc + new design</a>
 </div>
-</div>
-<div id="main">
+</div><div id="main">
 <button class="openbtn" onclick="openNav()">☰</button>
 </div>
 </div>
@@ -69,7 +61,7 @@ MathJax.Hub.Config({
 <div class="menu-item"><a href="mathjax.html">MathJax</a></div>
 <div class="menu-item"><a href="underscore.html">Underscore</a></div>
 <div class="menu-item"><a href="link.html">Link</a></div>
-<div class="menu-item"><a href="http://www.google.com" target="blank">Open&nbsp;in&nbsp;New&nbsp;Tab</a></div>
+<div class="menu-item"><a href="http://www.google.com" target=\"blank\">Open&nbsp;in&nbsp;New&nbsp;Tab</a></div>
 </div> <!-- <div id="layout-menu"> -->
 </div> <!-- <div id="layout-menu-container"> -->
 <div id="layout-content-container">
@@ -81,7 +73,7 @@ MathJax.Hub.Config({
 <ul>
 <li><p>Including <tt>#</tt> within a <tt>{{quoted block}}</tt> will fail. Use instead a <tt>raw</tt>
 block or place the <tt>#</tt> outside like in <tt>{{a&nbsp;}}\#{{2}}</tt> workaround.
-<a href="mailto:jacobm@stanford.edu" target=&ldquo;blank&rdquo;>Tell me</a> if this becomes annoying.</p>
+<a href="mailto:jacobm@stanford.edu" target="blank">Tell me</a> if this becomes annoying.</p>
 </li>
 <li><p>You may require an extra line break at the end of your file if it ends with a
 raw quoted section like <tt>{{&lt;/asdasd&gt;}}</tt>.</p>
@@ -119,7 +111,7 @@ highlighting.</p>
 <li><p><tt>img.eqwl</tt>s from full-line tex equations are now enclosed in a <tt>div.eqwl</tt>.
 This permits alternative CSS styling for full-size tex equations.</p>
 </li>
-<li><p>Added an <a href="modelines.html" target=&ldquo;blank&rdquo;><tt>analytics</tt></a> modeline for use with Google Analytics.</p>
+<li><p>Added an <a href="modelines.html" target="blank"><tt>analytics</tt></a> modeline for use with Google Analytics.</p>
 </li>
 <li><p>Improved C syntax highlighting.</p>
 </li>
@@ -326,8 +318,7 @@ default configuration file.</p>
 <div id="footer-container">
 <div id="footer">
 <div id="footer-text">
-Last edited  on July 1<sup>st</sup> 2020  12:34PM (Time Zone: PDT). </br>
-Powered by <a href="https://github.com/szl2/jemdoc-new-design" target="blank">jemdoc + new design</a>.
+Page generated 2023-11-05 23:08:39 中国标准时间, by <a href="https://github.com/jyhuang78/jemdoc-new-design/" target="blank">jemdoc+MathJax</a>.
 </div> <!-- <div id="footer-text"> -->
 </div> <!-- <div id="footer"> -->
 </div> <!-- <div id="footer-container"> -->
@@ -337,20 +328,12 @@ Powered by <a href="https://github.com/szl2/jemdoc-new-design" target="blank">je
 <script>
 function openNav() {
     if (window.innerWidth <= 1200) {
-        document.getElementById("layout-menu").style.width = "280px";
-        document.getElementById("layout-content-container").style.marginLeft = "280.8px";
-        document.getElementById("layout-content-container").style.position = "fixed";
+        document.getElementById("layout-menu").style.width = "200px";
     }
 }
 function closeNav() {
     if (window.innerWidth <= 1200) {
         document.getElementById("layout-menu").style.width = "0";
-        document.getElementById("layout-content-container").style.position = "static";
-        document.getElementById("layout-content-container").style.marginLeft = "0px";
-        setInterval(
-            function(){ location.reload() },
-            500
-        );
     }
 }
 </script>

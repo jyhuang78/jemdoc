@@ -1,34 +1,27 @@
 /* Default css file for jemdoc. */
 
 body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-	 			 Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue",
-				 Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-				 "Segoe UI Symbol";
+	font-family: Georgia, serif;
 	padding: 0;
 	margin: 0;
 }
 
 
 div#main-container {
-	min-height: 100vh;
 	background: white;
 	margin: auto;
 }
 
 div#header-container {
-	width: 100%;
-	height: 70px;
+	background: #24292e;
+	position: sticky;
+	top: 0px;
+	z-index: 1;
 }
 
 div#header {
-	width: 100vw;
 	height: 70px;
-	background: #24292e;
-	z-index: 1;
-	position: fixed;
-	display:inline-block;
-}
+	}
 
 div#header-icon-text-container {
 	padding-left: 20px;
@@ -65,45 +58,46 @@ div#header-text-container a:hover{
 }
 
 div#layout {
-	width: 100vw;
-	min-height: calc(100vh - 70px);
 	padding-bottom: 0;
-	display: inline-block;
+	display: table;
+	width: 100%;
 }
 
 div#layout-menu-container{
+	background: #f6f8fa;
+	border-right: 0.8px solid #e1e4e8;
+	display: table-cell;
+	vertical-align: top;
 }
 
 div#layout-menu {
 	padding-left: 0px;
 	padding-right: 0px;
-	padding-top: 0px;
-	padding-bottom: 25px;
-	height: calc(100% - 97px);
-	min-width: 280px;
-	position: fixed;
-	overflow: scroll;
-	background: #f6f8fa;
-	border-right: 0.8px solid #e1e4e8;
+	padding-top: 26px;
+	padding-bottom: 0px;
+	width: 200px;
+	overflow: auto;
+	position: sticky;
+	top: 70px;
 }
 
 #layout-menu a {
 	padding: 0px;
 	line-height: 2;
+	margin-left: 0.5em;
 }
 
 
 div#layout-content-container {
-	width: calc(100vw - 280.8px);
-	min-height: calc(100vh - 70px);
-	margin-left: 280.8px;
+	width: 100%;
 	background: none;
 	text-align: left;
-	display: inline-block;
+	display: table-cell;
+	vertical-align: top;
 }
 
 div#layout-content{
-	min-height: calc(100vh - 240px);
+	min-height: calc(100vh - 70px - 50px - 48.6px);
 	padding-top: 25px;
 	padding-bottom: 25px;
 	padding-left: 35px;
@@ -127,25 +121,28 @@ pre, tt {
 	font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
 	border-radius: 5px;
 	line-height: 1.5;
-	overflow: scroll;
-}
+	}
 
 a, a > tt {
-	color: #0366d6;
+	color: #224b8d;
 	text-decoration: none;
 }
 
 a:hover, a:hover > tt{
-	/*border-bottom: 1.25px #0366d6 dashed;*/
+	border-bottom: 1px gray dotted;
 	color: #ea4aaa;
 }
 
+div#header a:hover{
+	border-bottom: none;
+}
+
 #layout-menu a.current:link, #layout-menu a.current:visited {
-	color: #586069;
-	font-weight: 600;
+	color: #022b6d;
+	border-bottom: 1px gray solid;
 }
 #layout-menu a:link, #layout-menu a:visited, #layout-menu a:hover {
-	color: #0366d6;
+	color: #527bbd;
 	text-decoration: none;
 }
 #layout-menu a:hover {
@@ -173,7 +170,7 @@ div.menu-item {
 div#toptitle {
 	padding-bottom: 0.2em;
 	margin-bottom: 1.5em;
-	border-bottom: 1px solid #e1e4e8;
+	border-bottom: 3px double gray;
 }
 
 /* Reduce space if we begin the page with a title. */
@@ -198,11 +195,12 @@ strong {
 
 
 h1, h2, h3 {
+	color: #527bbd;
 	padding-bottom: 0.2em;
 	line-height: 1.25;
 	padding-top: 0.5em;
-	border-bottom: 0.7px solid #e1e4e8;
-	font-weight: 400;
+	border-bottom: 1px solid #aaaaaa;
+	font-weight: bold;
 }
 
 h1 {
@@ -228,12 +226,11 @@ h3 {
 
 p {
 	font-size: 16px;
-	line-height: 1.5;
+	line-height: 1.3;
 	margin-top: 0.0em;
 	margin-bottom: 0.8em;
 	padding: 0;
-	text-align: justify;
-}
+	}
 
 pre {
 	padding: 0;
@@ -252,7 +249,7 @@ div#footer {
 	max-width: 850px;
 	margin: auto;
 	padding-top: 25px;
-	padding-bottom: 25px;
+	padding-bottom: 0px;
 	padding-left: 35px;
 	padding-right: 35px;
 }
@@ -266,7 +263,8 @@ div#footer a:hover {
 }
 
 div#footer-text {
-	line-height: 30px;
+	border-top: 1px solid #c0c0c0;
+	padding-bottom: 8px;
 }
 
 ul, ol, dl {
@@ -337,7 +335,8 @@ div.codeblock, div.infoblock {
 }
 
 div.blocktitle {
-	color: #0366d6;
+	font-weight: bold;
+	color: #cd7b62;
 	font-size: 20px;
 	line-height: 2;
 }
@@ -347,11 +346,10 @@ div.blockcontent {
 }
 
 div.infoblock > div.blockcontent {
-	background: #fffbdd;
+	background: #ffffee;
 	border: 1px solid #f9c513;
 	border-radius: 9px;
-	color: #f9c513;
-}
+	}
 
 div.blockcontent p + ul, div.blockcontent p + ol {
 	margin-top: 0.4em;
@@ -399,7 +397,7 @@ span.comment, span.comment > *, span.string, span.string > * {
 }
 
 @media print {
-	#layout-menu {
+	div#header-container, div#layout-menu-container {
 		display: none;
 	}
 
@@ -496,6 +494,9 @@ div#text-container h2{
 div#text-container h3{
 	padding-top: 0px;
 	margin-top: 0px;
+	color: black;
+	font-size: 18px;
+	font-weight: 400;
 }
 
 div#text-container h1 + h3{
@@ -518,10 +519,7 @@ div#text-container p{
 
 
 div#main{
-	margin: auto;
-	height:45px;
-	display:inline-block;
-	vertical-align: middle;
+	display: none;
 }
 
 .openbtn {
@@ -537,7 +535,7 @@ div#main{
 
 
 div#layout-menu-container .closebtn {
-	font-size: 0;
+	display: none;
 }
 
 div#layout-menu-container .closebtn:hover {
@@ -547,24 +545,23 @@ div#layout-menu-container .closebtn:hover {
 
 
 /* Width to collapse sidebar */
-@media screen and (max-width: 1200px) {
-	div#header-text-container {
-		visibility: hidden;
-		width: 0;
-	}
-
+@media screen and (max-width: 700px) {
 	div#layout-menu-container{
 		width:0;
+		border-right: none;
 	}
 
 	div#layout-menu {
-		padding-top: 20px;
+		padding-top: 26px;
 		transition: 0.5s;
 		min-width: 0px;
 		width: 0px;
 		box-shadow: 8px 0px 10px 0 rgba(0, 0, 0, 0.3);
 		border: none;
-		/*position: fixed;*/
+		position: fixed;
+		height: calc(100% - 70px - 8px);
+		background: #f6f8fa;
+		border-right: 0.8px solid #e1e4e8;
 	}
 	div#layout-content-container {
 		transition: margin-left .5s;
@@ -572,7 +569,11 @@ div#layout-menu-container .closebtn:hover {
 		width: 100%;
 	}
 	div#main{
-		padding-left: calc(100vw - 150px);
+		display: block;
+		height: 45px;
+		float: right;
+		padding-right: 20px;
+		padding-top: 8px;
 	}
 
 	.openbtn {
@@ -590,6 +591,7 @@ div#layout-menu-container .closebtn:hover {
 	}
 
 	div#layout-menu-container .closebtn {
+	  display: block;
 	  position: absolute;
 	  top: 0;
 	  right: 25px;
@@ -613,6 +615,11 @@ div#layout-menu-container .closebtn:hover {
 
 /* Width to center image */
 @media screen and (max-width: 700px) {
+	div#header-text-container {
+		visibility: hidden;
+		width: 0;
+	}
+
 	img{
 		margin-right: 0px;
 	}
@@ -624,9 +631,6 @@ div#layout-menu-container .closebtn:hover {
 	div#layout-content{
 		padding-left:   20px;
 		padding-right:  20px;
-		padding-top:    16px;
-		padding-bottom: 15px;
-		min-height: calc(100vh - 190px);
 	}
 
 	div#footer-container{
@@ -635,8 +639,6 @@ div#layout-menu-container .closebtn:hover {
 	div#footer {
 		padding-left:   20px;
 		padding-right:  20px;
-		padding-top:    16px;
-		padding-bottom: 15px;
 	}
 
 	div#img-container {
