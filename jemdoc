@@ -361,7 +361,7 @@ def insertmenuitems(f, mname, current, prefix):
     if r: # then we have a menu item.
       link = r.group(2)
       if link[0] == '\\':
-        option = ' target=\\"blank\\"'
+        option = ' target="blank"'
         link = link[1:]
       else:
         option = ''
