@@ -2,7 +2,7 @@
 
 Yet, now it has a newer design than [jemdoc + new design](https://github.com/szl2/jemdoc-new-design). If you know how to use [jemdoc](https://jemdoc.jaboc.net/), there is no learning curve. The usage is exactly the same.
 
-**Demo:** https://jyhuang78.github.io/jemdoc-new-design/
+**Demo:** https://jyhuang78.github.io/jemdoc/
 
 ## Download
 
