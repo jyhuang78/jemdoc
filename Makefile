@@ -7,7 +7,7 @@ PHDOCS=$(addprefix docs/, $(HDOCS))
 docs : $(PHDOCS)
 
 docs/%.html : %.jemdoc MENU mysite.conf
-	./jemdoc -c mysite.conf $<
+	./jemdoc -o $@ -c mysite.conf $<
 
 clean :
 	rm $(PHDOCS)

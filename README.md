@@ -6,7 +6,7 @@ Yet, now it has a newer design than [jemdoc + new design](https://github.com/szl
 
 ## Download
 
-You need to download `./jemdoc`,`./jemdoc.css` and `./mysite.conf` files.
+You need to download `./jemdoc`,`./docs/jemdoc.css` and `./mysite.conf` files.
 
 Notice that, **you have to download the `./jemdoc` excutable, because there were some modification from the original one in [`jemdoc + new design`](https://github.com/szl2/jemdoc-new-design)**.
 
