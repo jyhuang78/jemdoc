@@ -605,6 +605,7 @@ div#layout-menu-container .closebtn:hover {
 	  padding-bottom: 5.3px;
 	  line-height: 1;
 	  margin-right: -25px;
+	  text-indent: 0;
 	  background: #ffdce0;
 	  color: #959da5;
 	}
