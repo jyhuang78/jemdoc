@@ -799,7 +799,7 @@ def br(b, f, tableblock=False):
 
   # Deal with em dash ---.
   r = re.compile(r"(?<!\\)---", re.M + re.S)
-  b = re.sub(r, r'&#8201;&mdash;&#8201;', b)
+  b = re.sub(r, r'&mdash;', b)
 
   # Deal with en dash --.
   r = re.compile(r"(?<!\\)--", re.M + re.S)
